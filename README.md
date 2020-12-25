@@ -1,3 +1,3 @@
 ### Hi there 👋 
 
-Reach out me: https://twitter.com/xiaohuo200
+Reach out to me: https://twitter.com/xiaohuo200
