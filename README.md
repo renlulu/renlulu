@@ -7,3 +7,6 @@ Besides my major job, what interests me recently is compliers technology. My dre
 And always, learning new language such as Rust and new tech stack of the fast growing ecosystem. All these will bring us to the future. Never stop!
 
 Reach out to me: https://twitter.com/xiaohuo200
+
+
+Follow up: cross chain innovation is coming soon!
