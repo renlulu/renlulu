@@ -4,7 +4,7 @@ I am Xiaohuo Ren, currently working for Zilliqa which is a Singapore based block
 
 Besides my major job, what interests me recently is compliers technology. My dream for 2021 is to write a parser using a modern language (e.g. golang or typescript) for scilla. If that also makes you excited, feel free to join me! 
 
-And always, learning new language such as Rust and new tech stack of the fast growing ecosystem. All these will bring us to the future. Never stop!
+And always, learning new language such as Rust and new tech stack of the fast growing ecosystem. All these will bring us to the future. Never stop! For beginners and those who want to become a software engineer, i would like to invite you to build this repository: https://github.com/renlulu/algorithms together : )
 
 Reach out to me: https://twitter.com/xiaohuo200
 
