@@ -9,4 +9,4 @@ And always, learning new language such as Rust and new tech stack of the fast gr
 Reach out to me: https://twitter.com/xiaohuo200
 
 
-Follow up: cross chain innovation is coming soon!
+Follow up: cross chain innovation is coming! try now: https://zilswap.io/bridge
