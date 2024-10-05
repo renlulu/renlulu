@@ -1,6 +1,8 @@
-# Why
+# Understanding ELF and Its Role in Process Creation
 
-# Overview
+## Why
+
+## Overview
 
 Executable Linkable Format
 
@@ -11,9 +13,9 @@ Executable Linkable Format
 | Shared Object File | .so |  |
 | Core Dump File | core dump |  |
 
-# Structure
+## Structure
 
-## ELF Header
+### ELF Header
 
 For any binary file (or object file), we can easily obtain its ELF Header using the `readelf` command:
 
@@ -44,31 +46,45 @@ ELF Header:
 
 The ELF Header ensures that the operating system can correctly read and interpret the object file.
 
-### Magic
+**Magic**
 
 The prefix starts with 7F, which is a standard identifier for ELF files. The succeeding three bytes are 45, 4C, and 46, which represent the ASCII codes for "E", "L", and "F" respectively.
 
-### Class
+**Class**
 
 Determines the architecture for the file. More accurately, it specifies the word size of the CPU/ISA: either 32-bit or 64-bit.
 
-### Data
+**Data**
 
-### Version
+Specifies the endianness for the rest of the file. It can be either little-endian or big-endian. For a quick explanation of endianness (also known as byte order), refer to this document: https://developer.mozilla.org/en-US/docs/Glossary/Endianness
 
-### OS/ABI
+**Version**
 
-### ABI Version
+More or less it is hardcoded to 1.
 
-### Machine
+**OS/ABI**
 
-### Type
+**ABI Version**
 
-## File data
+**Machine**
 
-### Program headers
+**Type**
 
-### ELF sections
+### File data
+
+**Program headers**
+
+**ELF sections**
+
+## Process Creation
+
+### Overview
+
+1. Create an isolated virtual address space.
+2. Read the ELF header and establish a mapping between the virtual address space and the executable file. (VMA: Virtual Memory Area. One VMA corresponds to one Segment, while one Segment may contain multiple Sections to prevent fragmentation.)
+3. Set the Program Counter (PC) to the entry point address specified in the ELF header.
+4. Note: At this point, no actual .text or .data sections have been loaded into memory.
+5. Page Fault: When the CPU attempts to execute the instruction pointed to by the Program Counter (PC), it finds that the virtual address is empty. This triggers a Page Fault, prompting the Operating System (OS) to set up a Virtual Memory Area (VMA) and load the necessary .text and .data sections as defined in the Executable and Linkable Format (ELF) file.
 
 # Reference
 
