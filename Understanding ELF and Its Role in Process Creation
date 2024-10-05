@@ -1,0 +1,20 @@
+# Why
+
+# Overview
+
+Executable Linkable Format
+
+| **ELF File Type** | **Example** | **Comment** |
+| --- | --- | --- |
+| Relocatable File | .o |  |
+| Executable File | /bin/bash | Can be executed directly; no extension name required. |
+| Shared Object File | .so |  |
+| Core Dump File | core dump |  |
+
+# Structure
+
+## ELF Header
+
+# Reference
+
+https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
