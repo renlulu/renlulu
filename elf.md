@@ -64,6 +64,11 @@ More or less it is hardcoded to 1.
 
 **OS/ABI**
 
+The operating system ABI version.
+
+> The ABI is very similar to an API, or it represents the compiled version of an API.
+> 
+
 **ABI Version**
 
 **Machine**
