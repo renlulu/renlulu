@@ -46,7 +46,28 @@ ELF Header:
 
 The ELF Header ensures that the operating system can correctly read and interpret the object file.
 
+```c
+
+  typedef struct {
+      unsigned char       e_ident[EI_NIDENT];
+      Elf32_Half          e_type;
+      Elf32_Half          e_machine;
+      Elf32_Word          e_version;
+      Elf32_Addr          e_entry;
+      Elf32_Off           e_phoff;
+      Elf32_Off           e_shoff;
+      Elf32_Word          e_flags;
+      Elf32_Half          e_ehsize;
+      Elf32_Half          e_phentsize;
+      Elf32_Half          e_phnum;
+      Elf32_Half          e_shentsize;
+      Elf32_Half          e_shnum;
+      Elf32_Half          e_shstrndx;
+  } Elf32_Ehdr;
+```
+
 **Magic**
+`e_ident`
 
 The prefix starts with 7F, which is a standard identifier for ELF files. The succeeding three bytes are 45, 4C, and 46, which represent the ASCII codes for "E", "L", and "F" respectively.
 
@@ -59,8 +80,14 @@ Determines the architecture for the file. More accurately, it specifies the word
 Specifies the endianness for the rest of the file. It can be either little-endian or big-endian. For a quick explanation of endianness (also known as byte order), refer to this document: https://developer.mozilla.org/en-US/docs/Glossary/Endianness
 
 **Version**
+`e_version`
 
 More or less it is hardcoded to 1.
+
+| **Name** | **Value** | **Meaning** |
+| --- | --- | --- |
+| `EV_NONE` | 0 | Invalid version |
+| `EV_CURRENT` | 1 | Current version |
 
 **OS/ABI**
 
@@ -69,11 +96,25 @@ The operating system ABI version.
 > The ABI is very similar to an API, or it represents the compiled version of an API.
 > 
 
+https://en.wikipedia.org/wiki/Application_binary_interface
+
 **ABI Version**
 
 **Machine**
 
 **Type**
+
+This member identifies the object file type.
+
+| **Name** | **Value** | **Meaning** |
+| --- | --- | --- |
+| `ET_NONE` | 0 | No file type |
+| `ET_REL` | 1 | Relocatable file |
+| `ET_EXEC` | 2 | Executable file |
+| `ET_DYN` | 3 | Shared object file |
+| `ET_CORE` | 4 | Core file |
+| `ET_LOPROC` | 0xff00 |  Processor-specific |
+| `ET_HIPROC` | 0xffff |  Processor-specific |
 
 ### File data
 
@@ -94,3 +135,5 @@ The operating system ABI version.
 # Reference
 
 https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
+
+https://www.muppetlabs.com/~breadbox/software/ELF.txt
