@@ -137,3 +137,5 @@ This member identifies the object file type.
 https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
 
 https://www.muppetlabs.com/~breadbox/software/ELF.txt
+
+https://www.youtube.com/watch?v=nC1U1LJQL8o
