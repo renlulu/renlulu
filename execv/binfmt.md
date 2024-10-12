@@ -1,5 +1,27 @@
 ## How Binary Get Loaded
 
+### Process Memory Layout
+
+Higher Addresses
+|--------------|
+| Stack        |  (Grows Downwards)
+|______________|
+|              |
+|              |  (Unavailable)
+|______________|
+| Heap         |  (Grows Upwards)
+|              |  <-- Program Break (Manipulated by sbrk)
+|              |  <-- malloc/free work within this area
+|              |
+|--------------|
+| BSS Segment  |  (Uninitialized Data)
+|--------------|
+| Data Segment |  (Initialized Data)
+|--------------|
+| Text Segment |  (Code)
+|--------------|
+Lower Addresses
+
 ### Basic Structure
 
 PRM is used as an abbreviation for "parameter".
