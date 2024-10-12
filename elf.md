@@ -140,3 +140,5 @@ https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
 https://www.muppetlabs.com/~breadbox/software/ELF.txt
 
 https://www.youtube.com/watch?v=nC1U1LJQL8o
+
+https://www.youtube.com/watch?v=XH6jDiKxod8&list=PLZCIHSjpQ12woLj0sjsnqDH8yVuXwTy3p
