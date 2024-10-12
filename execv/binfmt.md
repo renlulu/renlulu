@@ -1,6 +1,7 @@
 ## How Binary Get Loaded
 
 ### Process Memory Layout
+
 ```c
 Higher Addresses
 |--------------|
@@ -145,4 +146,5 @@ struct vm_area_struct {
 ## Reference
 
 - https://lwn.net/Articles/630727/
+- https://lwn.net/Articles/631631/
 - https://www.youtube.com/watch?v=nC1U1LJQL8o

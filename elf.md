@@ -4,6 +4,8 @@
 
 ## Overview
 
+![Alt text](image.png)
+
 Executable Linkable Format
 
 | **ELF File Type** | **Example** | **Comment** |
@@ -103,7 +105,6 @@ https://en.wikipedia.org/wiki/Application_binary_interface
 **Machine**
 
 **Type**
-
 This member identifies the object file type.
 
 | **Name** | **Value** | **Meaning** |
