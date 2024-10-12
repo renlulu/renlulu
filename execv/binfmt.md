@@ -1,7 +1,7 @@
 ## How Binary Get Loaded
 
 ### Process Memory Layout
-
+```c
 Higher Addresses
 |--------------|
 | Stack        |  (Grows Downwards)
@@ -21,6 +21,8 @@ Higher Addresses
 | Text Segment |  (Code)
 |--------------|
 Lower Addresses
+
+```
 
 ### Basic Structure
 
