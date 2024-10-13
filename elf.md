@@ -135,6 +135,7 @@ run it:
 Heloo, world.
 ```
 
+### Explanation
 
 ```c
 # >>>>>>>>>>>>> ELF FILE HEADER <<<<<<<<<<<<< 
@@ -210,8 +211,6 @@ CD 80           # 60 syscall >> int 80
 # Reference
 
 https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
-
-xxd - make a hexdump or do the reverse. max xxd to see the detail
 
 https://www.muppetlabs.com/~breadbox/software/ELF.txt
 
