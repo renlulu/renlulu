@@ -122,54 +122,6 @@ BB 00 00 00 00  # 5E ebx <- 0 (param)
 CD 80           # 60 syscall >> int 80
 ```
 
-**Magic**
-`e_ident`
-
-The prefix starts with 7F, which is a standard identifier for ELF files. The succeeding three bytes are 45, 4C, and 46, which represent the ASCII codes for "E", "L", and "F" respectively.
-
-**Class**
-
-Determines the architecture for the file. More accurately, it specifies the word size of the CPU/ISA: either 32-bit or 64-bit.
-
-**Data**
-
-Specifies the endianness for the rest of the file. It can be either little-endian or big-endian. For a quick explanation of endianness (also known as byte order), refer to this document: https://developer.mozilla.org/en-US/docs/Glossary/Endianness
-
-**Version**
-`e_version`
-
-More or less it is hardcoded to 1.
-
-| **Name** | **Value** | **Meaning** |
-| --- | --- | --- |
-| `EV_NONE` | 0 | Invalid version |
-| `EV_CURRENT` | 1 | Current version |
-
-**OS/ABI**
-
-The operating system ABI version.
-
-> The ABI is very similar to an API, or it represents the compiled version of an API.
-> 
-
-https://en.wikipedia.org/wiki/Application_binary_interface
-
-**ABI Version**
-
-**Machine**
-
-**Type**
-This member identifies the object file type.
-
-| **Name** | **Value** | **Meaning** |
-| --- | --- | --- |
-| `ET_NONE` | 0 | No file type |
-| `ET_REL` | 1 | Relocatable file |
-| `ET_EXEC` | 2 | Executable file |
-| `ET_DYN` | 3 | Shared object file |
-| `ET_CORE` | 4 | Core file |
-| `ET_LOPROC` | 0xff00 |  Processor-specific |
-| `ET_HIPROC` | 0xffff |  Processor-specific |
 
 ### File data
 
