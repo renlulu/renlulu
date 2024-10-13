@@ -68,6 +68,44 @@ The ELF Header ensures that the operating system can correctly read and interpre
   } Elf32_Ehdr;
 ```
 
+### Example
+
+source code:
+
+```c
+#include <stdio.h>
+int main() {
+  printf("Hello, world.\n");
+}
+```
+
+compile:
+
+```sh
+gcc hello.c
+```
+
+check <ELF> file header
+
+```sh
+file a.out
+
+a.out: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=507c7b03924effefd99309b49fb32be700d2036f, for GNU/Linux 3.2.0, not stripped
+```
+
+hexdump frist 5 lines:
+
+```sh
+xxd -g 1 a.out | head -5
+
+00000000: 7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00  .ELF............
+00000010: 03 00 3e 00 01 00 00 00 60 10 00 00 00 00 00 00  ..>.....`.......
+00000020: 40 00 00 00 00 00 00 00 90 36 00 00 00 00 00 00  @........6......
+00000030: 00 00 00 00 40 00 38 00 0d 00 40 00 1f 00 1e 00  ....@.8...@.....
+00000040: 06 00 00 00 04 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+```
+
+
 ```c
 # >>>>>>>>>>>>> ELF FILE HEADER <<<<<<<<<<<<< 
                 # All numbers (except in names) are in base sixteen (hexadecimal)
@@ -142,6 +180,8 @@ CD 80           # 60 syscall >> int 80
 # Reference
 
 https://linux-audit.com/elf-binaries-on-linux-understanding-and-analysis/
+
+xxd - make a hexdump or do the reverse. max xxd to see the detail
 
 https://www.muppetlabs.com/~breadbox/software/ELF.txt
 
