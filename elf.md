@@ -131,6 +131,8 @@ run it:
 
 ```sh
 ./heloo.out
+
+Heloo, world.
 ```
 
 
