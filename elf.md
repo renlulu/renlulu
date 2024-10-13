@@ -85,6 +85,14 @@ compile:
 gcc hello.c
 ```
 
+run:
+
+```sh
+./a.out
+
+Hello, world.
+```
+
 check <ELF> file header
 
 ```sh
@@ -103,6 +111,26 @@ xxd -g 1 a.out | head -5
 00000020: 40 00 00 00 00 00 00 00 90 36 00 00 00 00 00 00  @........6......
 00000030: 00 00 00 00 40 00 38 00 0d 00 40 00 1f 00 1e 00  ....@.8...@.....
 00000040: 06 00 00 00 04 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+```
+
+hexdump in plain hexdump style:
+
+```sh
+xxd -p a.out > hello.dmp
+```
+
+see dump file here: [hello.dmp](elf/hello.dmp)
+
+notice that the unicode for "Hello" is 48 65 6c 6c 6f, and the unicode for "Heloo" is 48 65 6c 6f 6f, so if we replace 48656c6c6f with 48656c6f6f in file hello.dmp, to get file [heloo.dmp](./elf/heloo.dmp), and reserve it back to binary file by running:
+
+```sh
+xxd -p -r heloo.dmp > heloo.out
+```
+
+run it:
+
+```sh
+./heloo.out
 ```
 
 
