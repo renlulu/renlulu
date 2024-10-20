@@ -4,7 +4,11 @@
 
 ## Overview
 
-![Alt text](image.png)
+![ELF walfthrough](elfwalkthrough.png)
+
+![ELF binary file](elf.jpg)
+
+
 
 Executable Linkable Format
 
