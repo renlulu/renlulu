@@ -6,13 +6,6 @@
 
 ![ELF walfthrough](elfwalkthrough.png)
 
-
-https://github.com/torvalds/linux/blob/715ca9dd687f89ddaac8ec8ccb3b5e5a30311a99/include/uapi/linux/elf.h#L241
-
-![ehdr](ehdr.jpg)
-
-![ELF binary file](elf.jpg)
-
 Executable Linkable Format
 
 | **ELF File Type** | **Example** | **Comment** |
@@ -74,6 +67,12 @@ The ELF Header ensures that the operating system can correctly read and interpre
       Elf32_Half          e_shstrndx;
   } Elf32_Ehdr;
 ```
+
+https://github.com/torvalds/linux/blob/715ca9dd687f89ddaac8ec8ccb3b5e5a30311a99/include/uapi/linux/elf.h#L241
+
+![ehdr](ehdr.jpg)
+
+![ELF binary file](elf.jpg)
 
 ### Example
 
